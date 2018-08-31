@@ -8,27 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-<body>   
-</div> 
-</form>
-</div>
+<body style="background-color:ghostwhite">   
+        <nav>
+                <div class="nav-wrapper">
+                  <a href="#" class="brand-logo center"><em>Persisting Users to Local Storage</em></a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="users.html" class="waves-effect waves-light btn"><em>Users</em></a></li>
+                  </ul>
+                </div>
+              </nav>
+              <br>
+              <br>
 <div class="container">
     <div class="row">
         <div class="col s12">
-            <div id="main" class="card">
-                <div class="card-content">
+            <div id="main" class="card blue-grey darken-1">
+                <div class="card-content white-text">
                     <span class="card-title">Add Users</span>
                     <div class="row">
-                        <form  id="user-form">
-                            <div class="input-field col s12">
+                        <form  id="user-form" >
+                            <div class="input-field col s12 ">
                                 <input type="text" name="firstname" id="fname">
-                                <label for="firstname">First Name</label>
+                                <label for="firstname" >First Name</label>
                             </div>
                             <div class="input-field col s12">
                                 <input type="text" name="lastname" id="lname">
                                 <label for="lastname">Last Name</label>
                             </div>
-                            <input type="submit" class="btn">
+                            <input type="submit" class="waves-effect waves-light btn" >
+                            <a href="" class="users btn black">Clear</a>
                         </form>
                     </div>
                 </div>
@@ -36,7 +44,16 @@
         </div>
     </div>
 </div>
-
+<footer class="page-footer" style="margin-top:150px">
+        <div class="container">
+          <div class="row">
+                <div class="footer-copyright">
+                        <div class="container">
+                        © 2018 anonymous
+                        <a class="grey-text text-lighten-4 right" href="">Refresh Page</a>
+                        </div>
+                      </div>
+                    </footer>
 
 
 <script
