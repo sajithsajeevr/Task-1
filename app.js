@@ -5,15 +5,15 @@ const fname=document.getElementById('fname').value;
 const lname=document.getElementById('lname').value;
 console.log(fname);
 let name=`${fname}+${lname}`;
-let users;
-if(localStorage.getItem('users')==null){
- users=[];
- console.log(users);}
+let persistingusersls;
+if(localStorage.getItem('persistingusersls')==null){
+  persistingusersls=[];
+ console.log(persistingusersls);}
  else{
-   users=JSON.parse(localStorage.getItem('users'));
+  persistingusersls=JSON.parse(localStorage.getItem('persistingusersls'));
 }
- console.log(users)
-users.push(name);
- localStorage.setItem('users',JSON.stringify(users));
+ console.log(persistingusersls)
+ persistingusersls.push(name);
+ localStorage.setItem('persistingusersls',JSON.stringify(persistingusersls));
 e.preventDefault();
 })
