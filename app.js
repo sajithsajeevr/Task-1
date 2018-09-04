@@ -36,7 +36,7 @@ e.preventDefault();
 //First name Validation Message
 function fNameValidator(e){
   if(!re.test(e.target.value)){
-    messageUI.innerHTML="Input must be Alphabetic & between 2-15 Characters";
+    messageUI.innerHTML="First Name must be Alphabetic & between 2-15 Characters";
   }else{
     messageUI.innerHTML="Acceptable First Name";
   }
@@ -44,7 +44,7 @@ function fNameValidator(e){
 //Last Name Validation Message
 function lNameValidator(e){
   if(!re.test(e.target.value)){
-    messageUI.innerHTML="Input must be Alphabetic & between 2-15 Characters";
+    messageUI.innerHTML="Last Name must be Alphabetic & between 2-15 Characters";
   }else{
     messageUI.innerHTML="Acceptable Last Name";
   }

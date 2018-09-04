@@ -2,11 +2,14 @@
 const userUI=document.getElementById('users');
 const clearUserUI=document.getElementById('clearUsers');
 
-//Clear Users Event Listener
+//Event Listeners
+document.addEventListener('DOMContentLoaded',showUsers);
 clearUserUI.addEventListener('click',clearUsers);
 
-//Retrievimg data from LS
-if(localStorage.getItem('persistingusersls')==null)
+
+//Showing Data from LS
+function showUsers(){
+    if(localStorage.getItem('persistingusersls')==null)
 {
     userUI.innerHTML+=`<li class="collection-item">No Users Found</li>`;
 }else{
@@ -16,6 +19,7 @@ let user=element.split('+');
 userUI.innerHTML+=`<li class="collection-item">${user[0]} ${user[1]}</li>`;
     
 });}
+}
 
 //Clear User Function 
 function clearUsers(e){
@@ -31,5 +35,5 @@ if(localStorage.getItem('persistingusersls')==null){
 }else{}};
 
 
+//for individual clear
 //'<i class="fa fa-remove"></i>'
-//seperated event listeners added some comments
