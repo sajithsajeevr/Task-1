@@ -17,7 +17,7 @@ function addUser(e){
 
   //Validation
   if(!re.test(fname.value)||!re.test(lname.value)){
-    messageUI.innerHTML="Input must be Alphabetic & between 2-15 Characters";
+    message('Input must be Alphabetic & between 2-15 Characters');
   }else{
 let name=`${fname.value}+${lname.value}`;
 let persistingusersls;
@@ -28,7 +28,7 @@ if(localStorage.getItem('persistingusersls')==null){
 }
  persistingusersls.push(name);
  localStorage.setItem('persistingusersls',JSON.stringify(persistingusersls));
- messageUI.innerHTML="Saved!!!";
+ message('Saved!!!');
   }
 e.preventDefault();
 }
@@ -36,16 +36,20 @@ e.preventDefault();
 //First name Validation Message
 function fNameValidator(e){
   if(!re.test(e.target.value)){
-    messageUI.innerHTML="First Name must be Alphabetic & between 2-15 Characters";
+    message('First Name must be Alphabetic & between 2-15 Characters');
   }else{
-    messageUI.innerHTML="Acceptable First Name";
+    message('Accepted First Name');
   }
 }
 //Last Name Validation Message
 function lNameValidator(e){
   if(!re.test(e.target.value)){
-    messageUI.innerHTML="Last Name must be Alphabetic & between 2-15 Characters";
+    message('Last Name must be Alphabetic & between 2-15 Characters');
   }else{
-    messageUI.innerHTML="Acceptable Last Name";
+    message('Accepted Last Name');
   }
+}
+//Display message
+function message(message){
+messageUI.innerHTML=`${message}`;
 }
